@@ -6,7 +6,8 @@
     <?php
     $x = new mysqli('127.0.0.1', 'root', '', 'mydb');
     $y = $x->query('SELECT `user_name`, `password` FROM `users`;');
-    $y2 = $y->fetch_all(MYSQLI_ASSOC)
+    $y2 = $y->fetch_all(MYSQLI_ASSOC);
+    session_start();
     ?>
 </head>
 <body>
@@ -17,7 +18,7 @@
         <input type="password" name='password'><br>
         <button type="submit">Zaloguj się</button>
     </form>
-    <form action="http://localhost/zsp-sklep/rejestracja.php">
+    <form action="rejestracja.php">
         <input type="submit" value="rejestracja" />
     </form>
     <?php
@@ -27,6 +28,8 @@
             if($y2[$i]['user_name'] == $_POST['login']){
                 if($y2[$i]['password'] == $_POST['password']){
                     $x2 = 1;
+                    $_SESSION['user_name'] = $_POST['login'];
+                    header("Location: oferty.php");
                     break;
                 }
             }
