@@ -5,7 +5,7 @@
     <title>Document</title>
     <?php
     $x = new mysqli('127.0.0.1', 'root', '', 'mydb');
-    $y = $x->query('SELECT `user_name`, `password` FROM `users`;');
+    $y = $x->query('SELECT `id`, `user_name`, `password` FROM `users`;');
     $y2 = $y->fetch_all(MYSQLI_ASSOC);
     session_start();
     ?>
@@ -28,6 +28,7 @@
             if($y2[$i]['user_name'] == $_POST['login']){
                 if($y2[$i]['password'] == $_POST['password']){
                     $x2 = 1;
+                    $_SESSION['id'] = $y2[$i]['id'];
                     $_SESSION['user_name'] = $_POST['login'];
                     header("Location: oferty.php");
                     break;
