@@ -17,24 +17,28 @@
         <input type="password" name='password'><br>
         <button type="submit">Zaloguj się</button>
     </form>
+    <form action="http://localhost/zsp-sklep/rejestracja.php">
+        <input type="submit" value="rejestracja" />
+    </form>
     <?php
-    $x = 0;
+    $x2 = 0;
     if(isset($_POST['login']) && isset($_POST['password'])){
         for($i = 0; $i < count($y2); $i++){
             if($y2[$i]['user_name'] == $_POST['login']){
                 if($y2[$i]['password'] == $_POST['password']){
-                    $x = 1;
+                    $x2 = 1;
                     break;
                 }
             }
         }
     }
-    if ($x == 1){
+    if ($x2 == 1){
         echo 'Udało ci się zalogować';
     }
     else{
         echo 'nie udało ci się';
     }
+    $x->close();
     ?>
     
 </body>
