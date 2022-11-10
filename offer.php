@@ -18,7 +18,7 @@
         echo 'Nazwa produktu'.$y2[$i]['product_name'].'<br>';
         echo 'Cena produktu '.$y2[$i]['price'].'<br>';
         echo 'Opisz<br>'.$y2[$i]['content'].'<br>';
-        echo '<a href="edytuj.php?oferta='.$y2[$i]['id'].'">edytuj</a>'.'<br>';
+        echo '<a href="edit.php?offer='.$y2[$i]['id'].'">edytuj</a>'.'<br>';
     }
     ?>
 </body>

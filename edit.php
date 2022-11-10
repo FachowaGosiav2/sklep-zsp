@@ -6,7 +6,13 @@
     <?php
     session_start();
     $x = new mysqli('127.0.0.1', 'root', '', 'mydb');
-    $y = $x->query("SELECT `id`, `product_name`, `price`, `content` FROM `announcement_and_orders` WHERE is_announcement = 1 AND id = ".$_GET['oferta'].";");
+    
+    if(isset($_POST['product_name']) and isset($_POST['price']) and isset($_POST['content'])){
+        $q = "UPDATE `announcement_and_orders` SET `product_name`='".$_POST['product_name']."',`price`='".$_POST['price']."',`content`='".$_POST['content']."' WHERE id = ".$_GET['offer'].";";
+        $x->query($q);
+    }
+
+    $y = $x->query("SELECT `id`, `product_name`, `price`, `content` FROM `announcement_and_orders` WHERE is_announcement = 1 AND id = ".$_GET['offer'].";");
     $y2 = $y->fetch_array(MYSQLI_ASSOC);
     ?>
 </head>
@@ -21,10 +27,8 @@
     </form>
     ';
 
-        if(isset($_POST['product_nameproduct_name']) and isset($_POST['price']) and isset($_POST['content'])){
-            $y = $x->query("UPDATE `announcement_and_orders` SET `product_name`='".$_POST['product_name']."',`price`='".$_POST['price']."',`content`='".$_POST['content']."' WHERE id = ".$_GET['oferta'].";");
-            mysqli_query($x, $y);
-        }
+
+    $x->close();
     ?>
 </body>
 </html>
