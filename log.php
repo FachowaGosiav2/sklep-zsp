@@ -18,8 +18,8 @@
         <input type="password" name='password'><br>
         <button type="submit">Zaloguj się</button>
     </form>
-    <form action="rejestracja.php">
-        <input type="submit" value="rejestracja" />
+    <form action="register.php">
+        <input type="submit" value="register" />
     </form>
     <?php
     $x2 = 0;
@@ -30,7 +30,7 @@
                     $x2 = 1;
                     $_SESSION['id'] = $y2[$i]['id'];
                     $_SESSION['user_name'] = $_POST['login'];
-                    header("Location: oferty.php");
+                    header("Location: offer.php");
                     break;
                 }
             }
