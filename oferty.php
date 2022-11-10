@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -15,8 +15,10 @@
     echo "twoje oferty<br>";
     for($i = 0; $i < count($y2); $i++){
         echo 'Numer ogłoszenia to '.$y2[$i]['id'].'<br>';
+        echo 'Nazwa produktu'.$y2[$i]['product_name'].'<br>';
         echo 'Cena produktu '.$y2[$i]['price'].'<br>';
         echo 'Opisz<br>'.$y2[$i]['content'].'<br>';
+        echo '<a href="edytuj.php?oferta='.$y2[$i]['id'].'">edytuj</a>'.'<br>';
     }
     ?>
 </body>
