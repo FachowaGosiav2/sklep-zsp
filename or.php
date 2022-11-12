@@ -11,5 +11,8 @@
     <form action="cart.php">
         Twoje zakupy <input type="submit" value="zakupy" />
     </form>
+    <form action="all_offer.php">
+        Wszystkie oferty <input type="submit" value="zakupy" />
+    </form>
 </body>
 </html>

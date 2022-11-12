@@ -19,6 +19,9 @@
     if(isset($_GET['sale'])){
         $y = $x->query("SELECT `id`, `product_name`, `price`, `content` FROM `announcement_and_orders` WHERE is_order = 1 AND id = ".$_GET['sale'].";");
     }
+    if(isset($_GET['no_offer'])){
+        $y = $x->query("SELECT `id`, `product_name`, `price`, `content` FROM `announcement_and_orders` WHERE is_announcement = 1;");
+    }
     $y2 = $y->fetch_array(MYSQLI_ASSOC);
     ?>
 </head>
