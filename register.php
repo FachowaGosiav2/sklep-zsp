@@ -25,6 +25,7 @@
         $x->close();
         header('Location: log.php');
     }
+    $x->close();
     ?>
 </body>
 </html>

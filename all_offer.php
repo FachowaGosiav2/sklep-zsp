@@ -19,7 +19,9 @@
         echo 'Cena produktu '.$y2[$i]['price'].'<br>';
         echo 'Opisz<br>'.$y2[$i]['content'].'<br>';
         echo '<a href="edit.php?no_offer='.$y2[$i]['id'].'">szczeguły</a>'.'<br>';
+        echo '<a href="edit.php?la_offer='.$y2[$i]['id'].'">kup</a>'.'<br>';
     }
+    $x->close();
     ?>
 </body>
 </html>

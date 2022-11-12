@@ -23,6 +23,7 @@
             $q = "INSERT INTO `announcement_and_orders`(`users_id`, `product_name`, `price`, `content`, `is_announcement`, `is_order`) VALUES ('". $_SESSION['id']."','".$_POST['name']."','".$_POST['cost']."','".$_POST['content']."','1','0');";
             $x->query($q);
         }
+        $x->close();
     ?>
 </body>
 </html>

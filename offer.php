@@ -24,5 +24,8 @@
     <form action="add_offer.php">
         <button type="submit">Dodaj nową oferte</button>
     </form>
+    <?php
+        $x->close();
+    ?>
 </body>
 </html>

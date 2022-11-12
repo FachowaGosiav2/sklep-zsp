@@ -20,6 +20,7 @@
         echo 'Opisz<br>'.$y2[$i]['content'].'<br>';
         echo '<a href="edit.php?sale='.$y2[$i]['id'].'">konktet</a>'.'<br>';
     }
+    $x->close();
     ?>
 </body>
 </html>
