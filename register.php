@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -23,7 +23,7 @@
         $y = "INSERT INTO `users`(`user_name`, `email`, `is_admin`, `password`) VALUES ('".$_POST["user_name"]."','".$_POST["mail"]."','0','".$_POST["password"]."')";
         $x->query($y);
         $x->close();
-        header('Location: logowanie.php');
+        header('Location: log.php');
     }
     ?>
 </body>

@@ -30,7 +30,7 @@
                     $x2 = 1;
                     $_SESSION['id'] = $y2[$i]['id'];
                     $_SESSION['user_name'] = $_POST['login'];
-                    header("Location: offer.php");
+                    header("Location: or.php");
                     break;
                 }
             }
